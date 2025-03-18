@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de CEP TS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    >
+</head>
+<body> 
+    <header id="cabecalho">
+      <nav class="navbar navbar-light bg-success">
+        <div class="container-fluid d-flex justify-content-center">
+          <span class="navbar-text h5 text-light">
+            Busca CEP
+          </span>
+        </div>
+      </nav>
+    </header>
+    
+    <section id="form-cep" class="py-4 container">
+      <div class="row">
+        <div class="col-10 col-xl-8 mx-auto">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="cepDigitado" placeholder="CEP" aria-label="CEP" aria-describedby="btn-buscar" maxlength="9">
+            <button class="btn btn-outline-success" type="button" id="btn-buscar">Buscar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="informacao-cep" class="py-4 container">
+      <div class="row">
+        <div class="col-10 col-xl-8 mx-auto">
+          <div class="border border-2 rounded p-3">
+            <h3 class="fs-3 py-2">Resultado</h3>
+            <form id="resultado-busca">
+              <div class="mb-2">
+                <label for="enderecoInfo" class="form-label">Endereço: </label>
+                <input type="text" class="form-control" id="enderecoInfo" disabled>
+              </div>
+              <div class="mb-2">
+                <label for="bairroInfo" class="form-label">Bairro: </label>
+                <input type="text" class="form-control" id="bairroInfo" disabled>
+              </div>
+              <div class="mb-2">
+                <label for="cidadeInfo" class="form-label">Cidade: </label>
+                <input type="text" class="form-control" id="cidadeInfo" disabled>
+              </div>
+              <div class="mb-2">
+                <label for="estadoInfo" class="form-label">Estado: </label>
+                <input type="text" class="form-control" id="estadoInfo" disabled>
+              </div>
+
+              <button type="button" class="btn btn-outline-danger w-100 fw-bold mt-3 py-3" id="btn-limpar">Limpar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
